@@ -47,10 +47,11 @@ local function get_color(color, invalid)
         return color_table
     end
     if invalid then
-        color = vim.fn.input("Input a valid color (empty selects default value) > ", "#B6B6B6")
+        color = vim.fn.input("Input a valid color (empty selects default value) > ", "")
     else
-        color = vim.fn.input("Input a color (empty selects default value) > ", "#B6B6B6")
+        color = vim.fn.input("Input a color (empty selects default value) > ", "")
     end
+    color = color or "#B6B6B6"
     color_table = get_color(color, true)
     return color_table
 end
