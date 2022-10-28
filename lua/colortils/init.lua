@@ -48,7 +48,6 @@ local function get_color(color, invalid)
     end
     if invalid then
         color = vim.fn.input("Input a valid color (empty selects default value) > ")
-        return
     else
         color = vim.fn.input("Input a color (empty selects default value) > ")
     end
