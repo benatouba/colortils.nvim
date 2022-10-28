@@ -10,7 +10,7 @@ function tool_utils.get_color(color)
     if color_table and color_table ~= {} and #color_table == 1 then
         return color_table[1]
     end
-    color = vim.fn.input("Input a color > ", "")
+    color = vim.fn.input("Input a color (empty starts with default) > ", "#B6B6B6")
     color_table = tool_utils.get_color(color)
     return color_table
 end
