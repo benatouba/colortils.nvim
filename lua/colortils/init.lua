@@ -36,7 +36,7 @@ local log = require("colortils.log")
 ---@param invalid boolean
 ---@return table color_table
 local function get_color(color, invalid)
-    vim.keymap.set("n", "<esc>", "<cmd>q<cr>, {})
+    vim.keymap.set("n", "<esc>", "<cmd>q<cr>", {})
     color = color or ""
     local color_table = color_utils.get_colors(color)
     -- check if table available, not empty and only found one color
